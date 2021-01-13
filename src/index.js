@@ -241,6 +241,7 @@ export default class ReactJkMusicPlayer extends PureComponent {
 
     this.player = createRef()
     this.destroyBtn = createRef()
+    window.reactmusicplayer = this
   }
 
   render() {
