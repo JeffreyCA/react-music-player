@@ -679,7 +679,7 @@ export default class ReactJkMusicPlayer extends PureComponent {
           loading={loading}
           visible={audioListsPanelVisible}
           audioLists={audioLists}
-          onPlay={this.audioListsPlay}
+          onPlay={this.onTogglePlay}
           onCancel={this.closeAudioListsPanel}
           icon={this.iconMap}
           isMobile={isMobile}
@@ -690,6 +690,7 @@ export default class ReactJkMusicPlayer extends PureComponent {
           onDelete={this.onDeleteAudioLists}
           removeId={removeId}
           locale={locale}
+          shouldShowPlayIcon={shouldShowPlayIcon}
           audioTitleExtra={audioTitleExtra}
         />
         {/* 播放模式提示框 */}

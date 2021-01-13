@@ -17,6 +17,7 @@ const AudioListsPanel = ({
   locale,
   icon,
   playing,
+  shouldShowPlayIcon,
   audioTitleExtra,
 }) => (
   <div
@@ -84,9 +85,9 @@ const AudioListsPanel = ({
                     {isCurrentPlaying && loading
                       ? icon.loading
                       : isCurrentPlaying
-                      ? playing
-                        ? icon.pause
-                        : icon.play
+                      ? shouldShowPlayIcon
+                        ? icon.play
+                        : icon.pause
                       : undefined}
                   </span>
                 </span>
