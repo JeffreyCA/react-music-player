@@ -271,6 +271,7 @@ export default class ReactJkMusicPlayer extends PureComponent {
       autoHiddenCover,
       showDestroy,
       responsive,
+      audioTitleExtra,
     } = this.props
 
     const { locale } = this
@@ -556,9 +557,12 @@ export default class ReactJkMusicPlayer extends PureComponent {
                 />
               )}
               <div className="progress-bar-content">
-                <span className="audio-title" title={audioTitle}>
-                  {this.renderAudioTitle()}
-                </span>
+                <div className="audio-title-group">
+                  <span className="audio-title" title={audioTitle}>
+                    {this.renderAudioTitle()}
+                  </span>
+                  {audioTitleExtra}
+                </div>
                 <section className="audio-main">
                   <span className="current-time" title={formattedCurrentTime}>
                     {loading ? '--' : formattedCurrentTime}
@@ -685,6 +689,7 @@ export default class ReactJkMusicPlayer extends PureComponent {
           onDelete={this.onDeleteAudioLists}
           removeId={removeId}
           locale={locale}
+          audioTitleExtra={audioTitleExtra}
         />
         {/* 播放模式提示框 */}
         {!isMobile && (

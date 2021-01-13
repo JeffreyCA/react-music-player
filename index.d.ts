@@ -238,6 +238,7 @@ export interface ReactJkMusicPlayerProps {
     fadeOut?: number
   }
   sortableOptions?: object
+  audioTitleExtra?: React.ReactNode
 }
 
 export default class ReactJkMusicPlayer extends React.PureComponent<

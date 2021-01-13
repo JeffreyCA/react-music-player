@@ -17,6 +17,7 @@ const AudioListsPanel = ({
   locale,
   icon,
   playing,
+  audioTitleExtra,
 }) => (
   <div
     className={cls('audio-lists-panel', panelToggleAnimate, {
@@ -26,10 +27,7 @@ const AudioListsPanel = ({
   >
     <div className="audio-lists-panel-header">
       <h2 className="audio-lists-panel-header-title">
-        <span>{locale.playListsText} / </span>
-        <span className="audio-lists-panel-header-num">
-          {audioLists.length}
-        </span>
+        <span>{locale.playListsText}</span>
         <span className="audio-lists-panel-header-actions">
           {remove && (
             <>
@@ -95,6 +93,7 @@ const AudioListsPanel = ({
                 <span className="group player-name" title={name}>
                   {name}
                 </span>
+                {audioTitleExtra}
                 <span className="group player-singer" title={singer}>
                   {singer}
                 </span>

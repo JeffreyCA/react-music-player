@@ -182,12 +182,18 @@
         padding: 0 20px;
         overflow: hidden;
 
-        .audio-title {
-          transition: color @common-animate-time;
-          .ellipsis-1();
-          display: inline-block;
-          width: 100%;
+        .audio-title-group {
+          display: inline-flex;
+          align-items: center;
+
+          .audio-title {
+            transition: color @common-animate-time;
+            .ellipsis-1();
+            display: inline-block;
+            width: 100%;
+          }
         }
+        
 
         .audio-main {
           width: 100%;
@@ -509,6 +515,12 @@
       color: @font-color;
       background-color: @primary-color-light;
       border-bottom: 1px solid #f4f4f7;
+
+      .audio-lists-panel-header-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
 
       &-line {
         background-color: #f4f4f7;
