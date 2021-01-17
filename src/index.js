@@ -2323,6 +2323,7 @@ export default class ReactJkMusicPlayer extends PureComponent {
     const { spaceBar } = this.props
     if (spaceBar && e.keyCode === SPACE_BAR_KEYCODE) {
       this.onTogglePlay()
+      e.preventDefault()
     }
   }
 
